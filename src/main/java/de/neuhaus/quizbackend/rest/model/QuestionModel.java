@@ -1,15 +1,14 @@
-package de.neuhaus.quizbackend.model;
+package de.neuhaus.quizbackend.rest.model;
 
 import lombok.Data;
 
 import java.math.BigInteger;
 
 @Data
-public class GameSessionModel {
+public class QuestionModel {
     private BigInteger id;
-    private String title;
+    private String question;
+    private String answer;
     private CategoryModel mainCategoryModel;
     private CategoryModel[] subCategories;
-    private QuestionModel[] questions;
-    private UserModel[] users;
 }

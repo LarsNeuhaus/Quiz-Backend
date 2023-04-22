@@ -1,4 +1,4 @@
-package de.neuhaus.quizbackend.dto;
+package de.neuhaus.quizbackend.rest.dto;
 
 import lombok.Data;
 

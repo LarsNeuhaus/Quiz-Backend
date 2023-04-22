@@ -1,7 +1,7 @@
-package de.neuhaus.quizbackend.service;
+package de.neuhaus.quizbackend.rest.service;
 
-import de.neuhaus.quizbackend.dto.UserCreationDTO;
-import de.neuhaus.quizbackend.model.UserModel;
+import de.neuhaus.quizbackend.rest.dto.UserCreationDTO;
+import de.neuhaus.quizbackend.rest.model.UserModel;
 
 import java.math.BigInteger;
 

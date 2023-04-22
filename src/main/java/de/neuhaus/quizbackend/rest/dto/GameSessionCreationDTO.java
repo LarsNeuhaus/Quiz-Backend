@@ -1,6 +1,6 @@
-package de.neuhaus.quizbackend.dto;
+package de.neuhaus.quizbackend.rest.dto;
 
-import de.neuhaus.quizbackend.model.CategoryModel;
+import de.neuhaus.quizbackend.rest.model.CategoryModel;
 import lombok.Data;
 
 @Data

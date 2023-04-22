@@ -1,9 +1,8 @@
-package de.neuhaus.quizbackend.controller;
+package de.neuhaus.quizbackend.rest.controller;
 
-import de.neuhaus.quizbackend.dto.QuestionCreationDTO;
-import de.neuhaus.quizbackend.model.QuestionModel;
-import de.neuhaus.quizbackend.model.UserModel;
-import de.neuhaus.quizbackend.service.QuestionService;
+import de.neuhaus.quizbackend.rest.dto.QuestionCreationDTO;
+import de.neuhaus.quizbackend.rest.model.QuestionModel;
+import de.neuhaus.quizbackend.rest.service.QuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

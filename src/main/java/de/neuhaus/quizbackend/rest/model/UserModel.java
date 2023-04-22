@@ -1,4 +1,4 @@
-package de.neuhaus.quizbackend.model;
+package de.neuhaus.quizbackend.rest.model;
 
 import lombok.Data;
 

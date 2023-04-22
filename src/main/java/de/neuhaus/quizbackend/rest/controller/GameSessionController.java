@@ -1,9 +1,8 @@
-package de.neuhaus.quizbackend.controller;
+package de.neuhaus.quizbackend.rest.controller;
 
-import de.neuhaus.quizbackend.dto.GameSessionCreationDTO;
-import de.neuhaus.quizbackend.mapper.GameSessionMapper;
-import de.neuhaus.quizbackend.model.GameSessionModel;
-import de.neuhaus.quizbackend.service.GameSessionService;
+import de.neuhaus.quizbackend.rest.dto.GameSessionCreationDTO;
+import de.neuhaus.quizbackend.rest.model.GameSessionModel;
+import de.neuhaus.quizbackend.rest.service.GameSessionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,8 +1,9 @@
-package de.neuhaus.quizbackend.service;
+package de.neuhaus.quizbackend.rest.service.impl;
 
-import de.neuhaus.quizbackend.dto.GameSessionCreationDTO;
-import de.neuhaus.quizbackend.mapper.GameSessionMapper;
-import de.neuhaus.quizbackend.model.GameSessionModel;
+import de.neuhaus.quizbackend.rest.dto.GameSessionCreationDTO;
+import de.neuhaus.quizbackend.rest.mapper.GameSessionMapper;
+import de.neuhaus.quizbackend.rest.model.GameSessionModel;
+import de.neuhaus.quizbackend.rest.service.GameSessionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
