@@ -27,16 +27,26 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserModel createUser(UserCreationDTO userCreationDTO) {
-        return null;
+        User user = new User(userCreationDTO.getName(), userCreationDTO.getPassword());
+        user = userRepository.save(user);
+        UserModel userModel = userMapper.mapEntityToModel(user);
+        return userModel;
     }
 
     @Override
-    public boolean deleteUser(BigInteger userId) {
-        return false;
+    public boolean deleteUser(Long userId) {
+        try {
+            userRepository.deleteById(userId);
+            return true;
+        } catch (Exception exception) {
+            return false;
+        }
     }
 
     @Override
-    public UserModel editUser(BigInteger userId, UserCreationDTO userCreationDTO) {
+    public UserModel editUser(Long userId, UserCreationDTO userCreationDTO) {
+        User userEntity = new User(userCreationDTO.getName(), userCreationDTO.getPassword());
+        userRepository.updateById(userId, userEntity);
         return null;
     }
 }

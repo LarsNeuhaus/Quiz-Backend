@@ -24,7 +24,7 @@ public class UserController {
         return ResponseEntity.internalServerError().build();
     }
 
-    @PostMapping(value = "/user/create")
+    @PutMapping(value = "/user/create")
     public ResponseEntity<UserModel> createUser(@RequestBody UserCreationDTO userCreationDTO) {
         UserModel userModel = userService.createUser(userCreationDTO);
         if (userModel != null) {
@@ -34,15 +34,15 @@ public class UserController {
     }
 
     @DeleteMapping(value = "/user/delete/{userId}")
-    public ResponseEntity<?> deleteUser(@PathVariable BigInteger userId) {
+    public ResponseEntity<?> deleteUser(@PathVariable Long userId) {
         if (userService.deleteUser(userId)) {
             return ResponseEntity.ok().build();
         }
         return ResponseEntity.internalServerError().build();
     }
 
-    @PutMapping(value = "/user/edit/{userId}")
-    public ResponseEntity<UserModel> editUser(@PathVariable BigInteger userId, @RequestBody UserCreationDTO userCreationDTO) {
+    @PostMapping(value = "/user/edit/{userId}")
+    public ResponseEntity<UserModel> editUser(@PathVariable Long userId, @RequestBody UserCreationDTO userCreationDTO) {
         UserModel userModel = userService.editUser(userId, userCreationDTO);
         if (userModel != null) {
             return ResponseEntity.ok(userModel);

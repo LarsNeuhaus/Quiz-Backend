@@ -7,4 +7,6 @@ import java.math.BigInteger;
 
 public interface UserRepository extends CrudRepository<User, Long> {
     User findById(BigInteger id);
+
+    void updateById(Long id, User user);
 }

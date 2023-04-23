@@ -10,7 +10,7 @@ public interface UserService {
 
     UserModel createUser(UserCreationDTO userCreationDTO);
 
-    boolean deleteUser(BigInteger userId);
+    boolean deleteUser(Long userId);
 
-    UserModel editUser(BigInteger userId, UserCreationDTO userCreationDTO);
+    UserModel editUser(Long userId, UserCreationDTO userCreationDTO);
 }
