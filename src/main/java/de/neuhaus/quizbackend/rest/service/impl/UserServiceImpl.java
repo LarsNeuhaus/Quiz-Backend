@@ -21,16 +21,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserModel getUser(BigInteger userId) {
         User user = userRepository.findById(userId);
-        UserModel userModel = userMapper.mapEntityToModel(user);
-        return userModel;
+        return userMapper.mapEntityToModel(user);
     }
 
     @Override
     public UserModel createUser(UserCreationDTO userCreationDTO) {
         User user = new User(userCreationDTO.getName(), userCreationDTO.getPassword());
         user = userRepository.save(user);
-        UserModel userModel = userMapper.mapEntityToModel(user);
-        return userModel;
+        return userMapper.mapEntityToModel(user);
     }
 
     @Override
@@ -48,7 +46,6 @@ public class UserServiceImpl implements UserService {
         User userEntity = userRepository.findById(userId);
         userEntity = userMapper.updateEntity(userEntity, userCreationDTO);
         userRepository.save(userEntity);
-        UserModel userModel = userMapper.mapEntityToModel(userEntity);
-        return userModel;
+        return userMapper.mapEntityToModel(userEntity);
     }
 }
