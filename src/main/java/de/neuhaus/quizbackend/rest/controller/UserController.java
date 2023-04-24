@@ -42,7 +42,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/user/edit/{userId}")
-    public ResponseEntity<UserModel> editUser(@PathVariable Long userId, @RequestBody UserCreationDTO userCreationDTO) {
+    public ResponseEntity<UserModel> editUser(@PathVariable BigInteger userId, @RequestBody UserCreationDTO userCreationDTO) {
         UserModel userModel = userService.editUser(userId, userCreationDTO);
         if (userModel != null) {
             return ResponseEntity.ok(userModel);

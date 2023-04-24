@@ -12,5 +12,5 @@ public interface UserService {
 
     boolean deleteUser(Long userId);
 
-    UserModel editUser(Long userId, UserCreationDTO userCreationDTO);
+    UserModel editUser(BigInteger userId, UserCreationDTO userCreationDTO);
 }

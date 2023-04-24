@@ -44,9 +44,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserModel editUser(Long userId, UserCreationDTO userCreationDTO) {
-        User userEntity = new User(userCreationDTO.getName(), userCreationDTO.getPassword());
-        userRepository.updateById(userId, userEntity);
-        return null;
+    public UserModel editUser(BigInteger userId, UserCreationDTO userCreationDTO) {
+        User userEntity = userRepository.findById(userId);
+        userEntity = userMapper.updateEntity(userEntity, userCreationDTO);
+        userRepository.save(userEntity);
+        UserModel userModel = userMapper.mapEntityToModel(userEntity);
+        return userModel;
     }
 }
